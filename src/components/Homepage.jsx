@@ -1,10 +1,11 @@
-
+import React from 'react';
+import Navbar from './Navbar.jsx';
 
 const Homepage = () => {
     return (
-        <h1 class="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+        <div>
+            <Navbar />
+        </div>
     )
 }
 export default Homepage;
