@@ -1,10 +1,24 @@
-
+import React, { useState } from 'react';
+import Navbar from './Navbar.jsx';
 
 const Homepage = () => {
+
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+    const handleLogin = () => {
+        setIsLoggedIn(true)
+    }
+
+    const handleBookService = () => {
+        setIsLoggedIn(false)
+    }
+
     return (
-        <h1 class="text-3xl font-bold underline">
-            Hello world!
-        </h1>
+        <div>
+            <Navbar isLoggedIn={isLoggedIn}
+            onHandleLogin={handleLogin}
+            onHandleBookService={handleBookService}/>
+        </div>
     )
 }
 export default Homepage;
