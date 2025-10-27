@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar.jsx';
+import Header from './Header.jsx';
+import About from './About.jsx';
+import Services from './Services.jsx';
 
 const Homepage = () => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(true);
+    
 
     const handleLogin = () => {
         setIsLoggedIn(true)
@@ -18,6 +22,9 @@ const Homepage = () => {
             <Navbar isLoggedIn={isLoggedIn}
             onHandleLogin={handleLogin}
             onHandleBookService={handleBookService}/>
+            <Header />
+            <About />
+            <Services />
         </div>
     )
 }
